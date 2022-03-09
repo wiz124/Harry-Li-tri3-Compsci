@@ -1,3 +1,4 @@
-language = "java10"
 
-run = "java challenge.src.Main"
+language = "bash"
+
+run = "java challenge/src/Main.java"
