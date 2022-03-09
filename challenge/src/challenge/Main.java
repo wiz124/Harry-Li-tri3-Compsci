@@ -1,6 +1,7 @@
 package challenge;
 import java.util.Scanner;
 
+
 //challenge 1 completed
 public class Main {
 
@@ -27,15 +28,17 @@ public class Main {
             selection = scan.nextLine();
 
             //checking selection
+            //quit selection
             if (selection.equals( "0")) {
-              //  f=false;
                 break;
             }
+            //intswap selection
             else if (selection.equals( "1")) {
                 intswap object = new intswap();
                 object.main();
 
             }
+            //array printer selection
             else if (selection.equals( "2")) {
                 arrprint object2 = new arrprint();
                 object2.main();
