@@ -1,3 +1,4 @@
+p
 import java.util.Scanner;
 
 //challenge 1 completed
@@ -31,8 +32,8 @@ public class Main {
                 break;
             }
             else if (selection.equals( "1")) {
-                intswap object = new intswap();
-                object.main();
+              
+                intswap.main();
 
             }
             else if (selection.equals( "2")) {
