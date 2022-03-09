@@ -10,6 +10,18 @@ public class Matrix {
 
     // Hack: create toString method using nested for loops to format output of a matrix
     public String toString(){
+        for(int i = 0; i<matrix.length; i++){
+            for(int j =0; j<matrix[i].length; j++){
+                if(matrix[i][j]>=0) {
+                    System.out.print(Integer.toString(matrix[i][j]));
+                    System.out.print(" ");
+                }
+                else{
+                    System.out.print("  ");
+                }
+            }
+            System.out.println(" ");
+        }
         return "";
     }
 
