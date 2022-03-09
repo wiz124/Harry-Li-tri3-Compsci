@@ -1,5 +1,4 @@
 package challenge;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -18,7 +17,7 @@ public class Main {
 
         //while loop to loop through menu, waiting for exit program
     //try catch block looped to make sure we get right response, otherwise quit program
-        String[] options = new String[] {"0)Quit", "1)Integer Swap", "2)2D Array Printer"};
+        String[] options = new String[] {"0)Quit", "1)Integer Swap", "2)Matrix printer"};
         Scanner scan =  new Scanner(System.in);
     while (f) {
 
@@ -55,8 +54,6 @@ public class Main {
             //array printer selection
             else if (selection.equals( "2")) {
 
-                arrprint object2 = new arrprint();
-                object2.main();
                 TimeUnit.SECONDS.sleep(3);
 
             }
