@@ -24,13 +24,16 @@ public class Main {
 
 
         try {
+            //wait time for loop, allow reader to read prompts and results
             TimeUnit.SECONDS.sleep(1);
+
             //prompt:
             System.out.println("\nMenu page: ");
             for(String i:options){
                 System.out.println("------------");
                 System.out.println(i);
             }
+
             System.out.println("Choose a program: ");
             selection = scan.nextLine();
 
