@@ -1,3 +1,4 @@
+package challenge;
 import java.util.Scanner;
 
 //challenge 1 completed
