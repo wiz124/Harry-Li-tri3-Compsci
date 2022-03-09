@@ -1,4 +1,4 @@
 
 language = "bash"
 
-run = "java challenge/src/challenge/Main.java"
+run = "javac challenge/src/challenge/*.java && java challenge/src/challenge/Main.java"
