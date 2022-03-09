@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-
+//challenge 1 completed
 public class Main {
 
     public static void main(String[] args){
@@ -24,9 +24,10 @@ public class Main {
             System.out.println("\nMenu page:\n0)Quit\n1)Integer Swapper\n2)2D Array Printer");
             System.out.println("Choose a program: ");
             selection = scan.nextLine();
+
             //checking selection
             if (selection.equals( "0")) {
-                f=false;
+              //  f=false;
                 break;
             }
             else if (selection.equals( "1")) {
@@ -50,12 +51,11 @@ public class Main {
         }
 
         catch (Exception e) {
-            //reeprompt
-          //  System.out.println("\nMenu page:\n0)Quit\n1)Integer Swapper\n2)2D Array Printer");
+            //reprompt
             System.out.println("Incorrect Selection. Must pick number from menu.");
-            //scan.nextLine();
         }
         }
+    System.out.println("Goodbye");
     scan.close();
     }
 
