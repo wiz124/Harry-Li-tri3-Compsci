@@ -1,5 +1,3 @@
-import java.io.IOException;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
@@ -10,41 +8,59 @@ public class Main {
 
         //initialize necessary var
         boolean f= true;
-        int selection;
+       String selection;
         Scanner scan =  new Scanner(System.in);
 
-    //try catch block looped to make sure we get right response, otherwise quit program
-    try {
-        while (f) {
-            System.out.println("Menu page:\n1)Integer Swapper\n2)2D Array Printer");
-            System.out.println("Choose a program: ");
 
-            selection = scan.nextInt();
-            switch (selection) {
-                case 1:
-                    scan.close();
-                    intswap object = new intswap();
-                    object.main();
-                    f = false;
-                    break;
-                case 2:
-                    scan.close();
-                    arrprint object2 = new arrprint();
-                    object2.main();
-                    f = false;
-                    break;
+
+        //while loop to loop through menu, waiting for exit program
+    //try catch block looped to make sure we get right response, otherwise quit program
+    while (f) {
+
+
+
+        try {
+            //prompt:
+            System.out.println("\nMenu page:\n0)Quit\n1)Integer Swapper\n2)2D Array Printer");
+            System.out.println("Choose a program: ");
+            selection = scan.nextLine();
+            //checking selection
+            if (selection.equals( "0")) {
+                f=false;
+                break;
+            }
+            else if (selection.equals( "1")) {
+                intswap object = new intswap();
+                object.main();
+
+            }
+            else if (selection.equals( "2")) {
+                arrprint object2 = new arrprint();
+                object2.main();
+
             }
 
+            //create an error for try catch block to activate and be useful
+            else {
+                String myString = null;
+                System.out.println(myString.length());
+            }
+
+
         }
-    }
-        catch(NumberFormatException e){
-            System.out.println("Menu page:\n1)Integer Swapper\n2)2D Array Printer");
-            System.out.println("Incorrect Selection. Please pick a number: ");
+
+        catch (Exception e) {
+            //reeprompt
+          //  System.out.println("\nMenu page:\n0)Quit\n1)Integer Swapper\n2)2D Array Printer");
+            System.out.println("Incorrect Selection. Must pick number from menu.");
+            //scan.nextLine();
         }
-
+        }
+    scan.close();
+    }
 
 
 
 
     }
-}
+
