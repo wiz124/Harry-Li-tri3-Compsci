@@ -9,7 +9,9 @@ public class Matrix {
     }
 
     // Hack: create toString method using nested for loops to format output of a matrix
-
+    public String toString(){
+        return "";
+    }
 
     // declare and initialize a matrix for a keypad
     static int[][] keypad() {
