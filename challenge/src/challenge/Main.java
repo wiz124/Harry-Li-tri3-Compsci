@@ -1,6 +1,6 @@
 package challenge;
 import java.util.Scanner;
-
+import java.util.concurrent.TimeUnit;
 
 //challenge 1 completed
 public class Main {
@@ -17,14 +17,20 @@ public class Main {
 
         //while loop to loop through menu, waiting for exit program
     //try catch block looped to make sure we get right response, otherwise quit program
-        //
+        String[] options = new String[] {"0)Quit", "1)Integer Swap", "2)2D Array Printer"};
+
     while (f) {
 
 
 
         try {
+            TimeUnit.SECONDS.sleep(1);
             //prompt:
-            System.out.println("\nMenu page:\n0)Quit\n1)Integer Swapper\n2)2D Array Printer");
+            System.out.println("\nMenu page: ");
+            for(String i:options){
+                System.out.println("------------");
+                System.out.println(i);
+            }
             System.out.println("Choose a program: ");
             selection = scan.nextLine();
 
@@ -37,17 +43,19 @@ public class Main {
             else if (selection.equals( "1")) {
                 intswap object = new intswap();
                 object.main();
+                TimeUnit.SECONDS.sleep(3);
 
             }
             //array printer selection
             else if (selection.equals( "2")) {
                 arrprint object2 = new arrprint();
                 object2.main();
+                TimeUnit.SECONDS.sleep(3);
 
             }
 
             //create an error for try catch block to activate and be useful
-            else {
+          else {
                 String myString = null;
                 System.out.println(myString.length());
             }
