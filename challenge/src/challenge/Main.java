@@ -2,6 +2,9 @@ package challenge;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
+import static challenge.Matrix.keypad;
+import static challenge.Matrix.numbers;
+
 //challenge 1 completed
 public class Main {
 
@@ -54,6 +57,13 @@ public class Main {
             //array printer selection
             else if (selection.equals( "2")) {
 
+                Matrix m0 = new Matrix(keypad());
+                System.out.println("Keypad:");
+                System.out.println(m0);
+
+                Matrix m1 = new Matrix(numbers());
+                System.out.println("Numbers Systems:");
+                System.out.println(m1);
                 TimeUnit.SECONDS.sleep(3);
 
             }
