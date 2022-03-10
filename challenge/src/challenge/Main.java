@@ -1,9 +1,10 @@
 package challenge;
+import java.io.*;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-import static challenge.Matrix.keypad;
-import static challenge.Matrix.numbers;
+import static challenge.IntByReference.*;
+import static challenge.Matrix.*;
 
 //challenge 1 completed
 public class Main {

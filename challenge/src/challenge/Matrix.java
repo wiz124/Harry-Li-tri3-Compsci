@@ -56,13 +56,6 @@ System.out.println("");
     }
 
     // tester method for matrix formatting
-    public static void main(String[] args) {
-        Matrix m0 = new Matrix(keypad());
-        System.out.println("Keypad:");
-        System.out.println(m0);
-
-        Matrix m1 = new Matrix(numbers());
-        System.out.println("Numbers Systems:");
-        System.out.println(m1);
-    }
+  
+  
 }
