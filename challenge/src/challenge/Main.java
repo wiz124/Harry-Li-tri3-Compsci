@@ -1,10 +1,7 @@
 package challenge;
-import java.io.*;
+
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
-
-import static challenge.IntByReference.*;
-import static challenge.Matrix.*;
 
 //challenge 1 completed
 public class Main {
@@ -58,11 +55,11 @@ public class Main {
             //array printer selection
             else if (selection.equals( "2")) {
 
-                Matrix m0 = new Matrix(keypad());
+                Matrix m0 = new Matrix(Matrix.keypad());
                 System.out.println("Keypad:");
                 System.out.println(m0);
 
-                Matrix m1 = new Matrix(numbers());
+                Matrix m1 = new Matrix(Matrix.numbers());
                 System.out.println("Numbers Systems:");
                 System.out.println(m1);
                 TimeUnit.SECONDS.sleep(3);
