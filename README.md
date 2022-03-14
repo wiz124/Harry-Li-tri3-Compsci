@@ -1,13 +1,9 @@
 # individual repository 
 give me an A+
 
-test
+Repl: https://replit.com/@HarryLi11/individual#Main.java
 
-
-test
-
-
-test
-
-
-test
+### Review ticket:
+Tech talk 0:
+    - try catch block 
+    
