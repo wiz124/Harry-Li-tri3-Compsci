@@ -5,10 +5,13 @@ Repl: https://replit.com/@HarryLi11/individual#Main.java
 
 ### Review ticket:
 Tech talk 0:
+
     - try catch block 
         code runs in try section, when an error occurs, catch block activates
-        in this case, we create an error in order for the catch section to activiate in case a different selection occurs
-        Use Exception e for catch all errors.
+    
+    - in this case, we create an error in order for the catch section to activiate in case a different selection occurs
+    
+    - Use Exception e for catch all errors.
  ``` java
          try {
             //wait time for loop, allow reader to read prompts and results
@@ -68,4 +71,41 @@ Tech talk 0:
         }
 ```
         
-    - pass by value and pass by reference
+    - pass by value and pass by reference, had an extra variable to allow swapping, allowed user input for this program
+    
+    - use toString method to make sure the proper string is printed out. 
+    
+``` java
+public class IntByReference {
+    private int value;
+
+    public IntByReference(int a){
+        value =a;
+
+    }
+    public void swap(IntByReference a){
+        int value = this.value;
+        this.value=a.value;
+        a.value=value;
+    }
+    public String toString(){
+        return Integer.toString(value);
+    }
+    // Hack: create IntByReference, swapToLowHighOrder and toString methods
+
+    // static method that enables me to see numbers swapped by reference (before, after)
+    public static void swapper(int n0, int n1) {
+        IntByReference a = new IntByReference(n0);
+        IntByReference b = new IntByReference(n1);
+        System.out.println("Before: " + a + " " + b);
+        System.out.println("Swapped!");
+        a.swap(b);  // conditionally build swap method to change values of a, b
+        System.out.println("After: " + a + " " + b);
+        System.out.println();
+    }
+
+}
+```
+
+    
+    
