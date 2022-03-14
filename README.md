@@ -15,6 +15,8 @@ Tech talk 0:
         
         Use Exception e for catch all errors.
         
+        try catch block put in while loop to make sure correct input ensured unless user exits
+        
  ``` java
          try {
             //wait time for loop, allow reader to read prompts and results
