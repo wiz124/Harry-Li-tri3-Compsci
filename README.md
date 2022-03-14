@@ -9,8 +9,7 @@ Tech talk 0:
         code runs in try section, when an error occurs, catch block activates
         in this case, we create an error in order for the catch section to activiate in case a different selection occurs
         Use Exception e for catch all errors.
-        
-        ``` java
+ ``` java
          try {
             //wait time for loop, allow reader to read prompts and results
             TimeUnit.SECONDS.sleep(1);
@@ -67,6 +66,6 @@ Tech talk 0:
             System.out.println("Incorrect input");
 
         }
-        ```
+```
         
     - pass by value and pass by reference
