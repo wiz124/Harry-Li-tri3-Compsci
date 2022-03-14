@@ -84,6 +84,8 @@ Tech talk 0:
     
     use toString method to make sure the proper string is printed out. 
     
+    challenge was pretty simple overall
+    
 ``` java
 public class IntByReference {
     private int value;
