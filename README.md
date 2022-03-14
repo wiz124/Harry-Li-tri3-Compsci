@@ -5,11 +5,10 @@ Repl: https://replit.com/@HarryLi11/individual#Main.java
 
 ### Review ticket:
 Tech talk 0:
-
-    - try catch block 
+    challenge 1:
+        try catch block 
         code runs in try section, when an error occurs, catch block activates
-    
-    - in this case, we create an error in order for the catch section to activiate in case a different selection occurs
+        in this case, we create an error in order for the catch section to activiate in case a different selection occurs
     
     - Use Exception e for catch all errors.
  ``` java
@@ -70,10 +69,10 @@ Tech talk 0:
 
         }
 ```
-        
-    - pass by value and pass by reference, had an extra variable to allow swapping, allowed user input for this program
-    
-    - use toString method to make sure the proper string is printed out. 
+    Challenge 2:
+    pass by value and pass by reference, had an extra variable to allow swapping, allowed user input for this program
+    had a constructor to hold values 
+    use toString method to make sure the proper string is printed out. 
     
 ``` java
 public class IntByReference {
