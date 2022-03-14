@@ -1,7 +1,7 @@
 # individual repository 
 give me an A+
 
-This weeks review ticket: https://github.com/wiz124/individual/issues/2
+[This weeks review ticket:] (https://github.com/wiz124/individual/issues/2)
 
 Repl: https://replit.com/@HarryLi11/individual#Main.java
 
