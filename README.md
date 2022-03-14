@@ -7,7 +7,10 @@ Repl: https://replit.com/@HarryLi11/individual#Main.java
 Tech talk 0:
     - try catch block 
         code runs in try section, when an error occurs, catch block activates
-        ```java
+        in this case, we create an error in order for the catch section to activiate in case a different selection occurs
+        Use Exception e for catch all errors.
+        
+        ``` java
          try {
             //wait time for loop, allow reader to read prompts and results
             TimeUnit.SECONDS.sleep(1);
