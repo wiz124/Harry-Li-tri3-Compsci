@@ -5,12 +5,12 @@ Repl: https://replit.com/@HarryLi11/individual#Main.java
 
 ### Review ticket:
 Tech talk 0:
+
     challenge 1:
         try catch block 
         
         code runs in try section, when an error occurs, catch block activates
         
-       
         in this case, we create an error in order for the catch section to activiate in case a different selection occurs
         
         Use Exception e for catch all errors.
@@ -116,4 +116,46 @@ public class IntByReference {
 
 Challenge 3:
 
+    Created a constructor
     
+    Used nested for loops to traverse 2D arrays, one nest loop for traversing forward, one nested loop for traversing backwards
+    
+    nest for loops in toString method to print and format data inside object
+    
+    figured out when and where to use print new line and when not to
+   
+``` java
+
+ public String toString(){
+
+        //traverse matrix
+        for(int i = 0; i<matrix.length; i++){
+            for(int j =0; j<matrix[i].length; j++){
+                if(matrix[i][j]>=0) {
+                    System.out.print(Integer.toHexString(matrix[i][j]));
+                    System.out.print(" ");
+                }
+                else{
+                    System.out.print("  ");
+                }
+            }
+            System.out.println(" ");
+        }
+System.out.println("");
+
+        //traverse matrix from other side
+        for (int i =matrix.length-1; i>=0; i--){
+            for(int j=matrix[i].length-1; j>=0; j--){
+                if(matrix[i][j]>=0) {
+                    System.out.print(Integer.toHexString(matrix[i][j]));
+                    System.out.print(" ");
+                }
+                else{
+                    System.out.print("  ");
+                }
+            }
+            System.out.println(" ");
+        }
+        return "";
+    }
+```
