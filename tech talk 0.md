@@ -1,3 +1,7 @@
+layout: page
+title: "Tech Talk 0"
+permalink: https://wiz124.github.io/individual/techtalk0
+
 ### Review ticket:
 Tech talk 0:
 
