@@ -2,5 +2,6 @@ theme: jekyll-theme-cayman
 title: Data Structure Tri3
 description: Give me A+
 
-
+include:
+- navigation.html
 
