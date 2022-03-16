@@ -1,4 +1,3 @@
-{% include navigation.html %}
 
 # individual repository 
 give me an A+
