@@ -1,5 +1,5 @@
 
-
+{% include navigation.html %}
 ### Review ticket:
 Tech talk 0:
 
