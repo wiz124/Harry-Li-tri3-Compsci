@@ -1,7 +1,16 @@
 
 {% include navigation.html %}
-### Review ticket:
-Tech talk 0:
+## Tech talks:
+
+All tech talks can be found here
+<table>
+    <tr>
+        <td><a href="#tt0">TT0</a></td>
+        <td>More Coming Soon!</td>
+    </tr>
+</table>
+
+#### TT0:
 
     challenge 1:
         try catch block 
