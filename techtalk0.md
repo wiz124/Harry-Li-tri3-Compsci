@@ -12,16 +12,17 @@ All tech talks can be found here
 
 #### TT0:
 
-    challenge 1:
-        try catch block 
+challenge 1:
+    
+    try catch block 
         
-        code runs in try section, when an error occurs, catch block activates
+    code runs in try section, when an error occurs, catch block activates
         
-        in this case, we create an error in order for the catch section to activiate in case a different selection occurs
+    in this case, we create an error in order for the catch section to activiate in case a different selection occurs
         
-        Use Exception e for catch all errors.
+    Use Exception e for catch all errors.
         
-        try catch block put in while loop to make sure correct input ensured unless user exits
+    try catch block put in while loop to make sure correct input ensured unless user exits
         
  ``` java
          try {
@@ -82,7 +83,7 @@ All tech talks can be found here
         }
 ```
 
-    Challenge 2:
+Challenge 2:
     
     pass by value and pass by reference, had an extra variable to allow swapping, allowed user input for this program
     
