@@ -187,7 +187,7 @@ Challenge 1:
     had to fiddle around with printqueue placement to get exact output
     
     
-''' java
+``` java
 
         //other code not shown
          public void addList(T[]... seriesOfObjects) {
@@ -237,17 +237,17 @@ Challenge 2:
     
 ``` java
 
-//other code not shown 
- Queue<Integer> mergedQueue = new LinkedList<Integer>();
-        while(!first.isEmpty() && !second.isEmpty()){
-            if(second.peek()>first.peek()){
-                mergedQueue.add(first.poll());
-                mergedQueue.add(second.poll());
-            }
-            else{
-                mergedQueue.add(second.poll());
-                mergedQueue.add(first.poll());
-            }
-        }
-//other code not shown
+        //other code not shown 
+         Queue<Integer> mergedQueue = new LinkedList<Integer>();
+                while(!first.isEmpty() && !second.isEmpty()){
+                    if(second.peek()>first.peek()){
+                        mergedQueue.add(first.poll());
+                        mergedQueue.add(second.poll());
+                    }
+                    else{
+                        mergedQueue.add(second.poll());
+                        mergedQueue.add(first.poll());
+                    }
+                }
+        //other code not shown
 ```
