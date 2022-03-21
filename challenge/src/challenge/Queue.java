@@ -29,7 +29,10 @@ public class Queue<T> implements Iterable<T> {
             this.tail = tail;  // update tail
         }
     }
+    public void delete(){
+      this.head=this.head.getNext();
 
+    }
     /**
      *  Returns the head object.
      *
@@ -111,6 +114,7 @@ class QueueManager<T> {
     public QueueManager(String name, T[]... seriesOfObjects) {
         this.name = name;
         this.addList(seriesOfObjects);
+        this.deleteList(seriesOfObjects);
     }
 
     /**
@@ -119,9 +123,23 @@ class QueueManager<T> {
     public void addList(T[]... seriesOfObjects) {
         for (T[] objects: seriesOfObjects)
             for (T data : objects) {
+                System.out.println("Enqueued data: "+ data);
                 this.queue.add(data);
                 this.count++;
+                printQueue();
             }
+    }
+    public void deleteList(T[]... seriesOfObjects){
+        for(T[] objects: seriesOfObjects){
+            for(T data: objects){
+                System.out.println("Dequeued data: " + data);
+                this.queue.delete();
+                this.count--;
+                printQueue();
+
+
+            }
+        }
     }
 
     /**
@@ -146,8 +164,7 @@ class QueueTester {
         // Create iterable Queue of Words
         Object[] words = new String[] { "seven", "slimy", "snakes", "sallying", "slowly", "slithered", "southward"};
         QueueManager qWords = new QueueManager("Words", words );
-        qWords.printQueue();
-
+/*
         // Create iterable Queue of Integers
         Object[] numbers = new Integer[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         QueueManager qNums = new QueueManager("Integers", numbers );
@@ -177,5 +194,6 @@ class QueueTester {
         );
         qMix.queue.add("End");
         qMix.printQueue();
+        */
     }
 }
