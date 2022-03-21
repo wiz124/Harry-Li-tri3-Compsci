@@ -31,7 +31,10 @@ public class Queue<T> implements Iterable<T> {
     }
     public void delete(){
       this.head=this.head.getNext();
-
+      if(head==null) {
+          LinkedList<T> tail = new LinkedList<>(null, null);
+          this.head=tail;
+      }
     }
     /**
      *  Returns the head object.
