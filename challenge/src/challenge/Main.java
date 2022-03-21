@@ -1,7 +1,10 @@
 package challenge;
 
+import java.util.Queue;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+
+
 
 //challenge 1 completed
 public class Main {
@@ -18,7 +21,7 @@ public class Main {
 
         //while loop to loop through menu, waiting for exit program
     //try catch block looped to make sure we get right response, otherwise quit program
-        String[] options = new String[] {"0)Quit", "1)Integer Swap", "2)Matrix printer"};
+        String[] options = new String[] {"0)Quit", "1)Integer Swap", "2)Matrix printer", "3)Queue fiddling", "4)Queue merging"};
         Scanner scan =  new Scanner(System.in);
     while (f) {
 
@@ -64,6 +67,17 @@ public class Main {
                 System.out.println(m1);
                 TimeUnit.SECONDS.sleep(3);
 
+            }
+            else if (selection.equals("3")){
+                Object[] words = new String[] { "seven", "slimy", "snakes", "sallying", "slowly", "slithered", "southward"};
+                new QueueManager("Words", words );
+            }
+            else if(selection.equals("4")){
+                Queue result = mergeQueue.merge(mergeQueue.first(), mergeQueue.second());
+                System.out.println("1st Queue: "+mergeQueue.first());
+                System.out.println("2nd Queue: "+mergeQueue.second());
+                TimeUnit.SECONDS.sleep(1);
+                System.out.println("Merged Queue: "+ result);
             }
 
             //create an error for try catch block to activate and be useful
