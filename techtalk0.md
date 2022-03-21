@@ -227,13 +227,14 @@ Challenge 1:
 ```
 
 Challenge 2:
+
     This one was a bit difficult to figure out due to the fact that I couldn't traverse queue like an array
     
     It also took me a while to figure out the properties of .poll(), didn't know it removed the head
     
     When I figured it out, it was relatively easy and straightforward thinking, especially since the queue's themselves were already sorted
     
-    It was just a while statement comparing each head of the queue
+    It was just a while statement comparing each head of the queue, then adding sorted values to a new queue
     
 ``` java
 
@@ -251,3 +252,30 @@ Challenge 2:
                 }
         //other code not shown
 ```
+
+Challenge 3
+        
+        had to learn what a stack is, basically a type of data structure
+        
+        basically just transfer queue items to stack and back to queue
+        
+        just used for loops to do so, using size of queue as limit
+        
+``` java
+        int n=a.size();
+        Stack<Integer> stack = new Stack<Integer>();
+        for(int i=0; i<n; i++){
+            int curr = a.poll();
+            stack.push(curr);
+        }
+        for (int i = 0; i < n; i++) {
+            int curr = stack.pop();
+            a.add(curr);
+        }
+        System.out.print("Reversed Queue: ");
+        for (Integer i : a) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+```
+        
