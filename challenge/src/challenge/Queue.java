@@ -117,7 +117,6 @@ class QueueManager<T> {
     public QueueManager(String name, T[]... seriesOfObjects) {
         this.name = name;
         this.addList(seriesOfObjects);
-        this.deleteList(seriesOfObjects);
     }
 
     /**
@@ -167,9 +166,8 @@ class QueueTester {
         // Create iterable Queue of Words
         Object[] words = new String[] { "seven", "slimy", "snakes", "sallying", "slowly", "slithered", "southward"};
         QueueManager qNums =new QueueManager("Words", words);
+        qNums.deleteList();
 
-        Object[] numone =  new Integer[] {1,4,5,8};
-        Object[] numtwo  = new Integer[] {2,3,6,7};
 /*
         // Create iterable Queue of Integers
         Object[] numbers = new Integer[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
