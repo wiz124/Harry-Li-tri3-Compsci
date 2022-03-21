@@ -6,6 +6,7 @@ All tech talks can be found here
 <table>
     <tr>
         <td><a href="#tt0">TT0</a></td>
+        <td><a href="#tt1">TT1</a></td>
         <td>More Coming Soon!</td>
     </tr>
 </table>
@@ -171,3 +172,79 @@ System.out.println("");
     }
 ```
 
+#### TT1:
+
+Challenge 1:
+
+    looked like a lot at first but was really simple
+    
+    create delete method for forumula to delete elements in queue, took me a while to make sense of how queue works
+    
+    created deletelist method to actually do the deleting, used nested for loops like in the addList
+    
+    I find it weird how queues can't really be traversed like arrays
+    
+    had to fiddle around with printqueue placement to get exact output
+    
+    
+''' java
+//other code not shown
+    public void addList(T[]... seriesOfObjects) {
+        for (T[] objects: seriesOfObjects)
+            for (T data : objects) {
+                System.out.println("Enqueued data: "+ data);
+                this.queue.add(data);
+                this.count++;
+                printQueue();
+            }
+    }
+    
+    //other code not shown
+    public void deleteList(T[]... seriesOfObjects){
+        for(T[] objects: seriesOfObjects){
+            for(T data: objects){
+                System.out.println("Dequeued data: " + data);
+                this.queue.delete();
+                this.count--;
+                printQueue();
+
+
+            }
+        }
+    }
+    
+    //other code not shown
+       public void delete(){
+      this.head=this.head.getNext();
+      if(head==null) {
+          LinkedList<T> tail = new LinkedList<>(null, null);
+          this.head=tail;
+      }
+    }
+    
+    //other code not shown
+```
+
+Challenge 2:
+    This one was a bit difficult to figure out due to the fact that I couldn't traverse queue like an array
+    
+    It also took me a while to figure out the properties of .poll(), didn't know it removed the head
+    
+    When I figured it out, it was relatively easy and straightforward thinking, especially since the queue's themselves were already sorted
+    
+    It was just a while statement comparing each head of the queue
+    
+``` java
+//other code not shown 
+ Queue<Integer> mergedQueue = new LinkedList<Integer>();
+        while(!first.isEmpty() && !second.isEmpty()){
+            if(second.peek()>first.peek()){
+                mergedQueue.add(first.poll());
+                mergedQueue.add(second.poll());
+            }
+            else{
+                mergedQueue.add(second.poll());
+                mergedQueue.add(first.poll());
+            }
+        }
+//other code not shown
