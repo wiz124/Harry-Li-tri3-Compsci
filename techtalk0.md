@@ -188,40 +188,41 @@ Challenge 1:
     
     
 ''' java
-//other code not shown
-    public void addList(T[]... seriesOfObjects) {
-        for (T[] objects: seriesOfObjects)
+
+        //other code not shown
+         public void addList(T[]... seriesOfObjects) {
+         for (T[] objects: seriesOfObjects)
             for (T data : objects) {
                 System.out.println("Enqueued data: "+ data);
                 this.queue.add(data);
                 this.count++;
                 printQueue();
             }
-    }
-    
-    //other code not shown
-    public void deleteList(T[]... seriesOfObjects){
-        for(T[] objects: seriesOfObjects){
-            for(T data: objects){
-                System.out.println("Dequeued data: " + data);
-                this.queue.delete();
-                this.count--;
-                printQueue();
-
-
-            }
         }
-    }
     
-    //other code not shown
-       public void delete(){
-      this.head=this.head.getNext();
-      if(head==null) {
-          LinkedList<T> tail = new LinkedList<>(null, null);
-          this.head=tail;
-      }
-    }
+         //other code not shown
+          public void deleteList(T[]... seriesOfObjects){
+               for(T[] objects: seriesOfObjects){
+                     for(T data: objects){
+                          System.out.println("Dequeued data: " + data);
+                            this.queue.delete();
+                             this.count--;
+                              printQueue();
+
+
+                 }
+            }
+         }
     
+        //other code not shown
+         public void delete(){
+          this.head=this.head.getNext();
+        if(head==null) {
+             LinkedList<T> tail = new LinkedList<>(null, null);
+            this.head=tail;
+        }
+        }
+       
     //other code not shown
 ```
 
@@ -235,6 +236,7 @@ Challenge 2:
     It was just a while statement comparing each head of the queue
     
 ``` java
+
 //other code not shown 
  Queue<Integer> mergedQueue = new LinkedList<Integer>();
         while(!first.isEmpty() && !second.isEmpty()){
@@ -248,3 +250,4 @@ Challenge 2:
             }
         }
 //other code not shown
+```
