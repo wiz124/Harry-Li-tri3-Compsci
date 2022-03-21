@@ -262,6 +262,8 @@ Challenge 3
         just used for loops to do so, using size of queue as limit
         
 ``` java
+
+//other code not shown
         int n=a.size();
         Stack<Integer> stack = new Stack<Integer>();
         for(int i=0; i<n; i++){
@@ -277,5 +279,6 @@ Challenge 3
             System.out.print(i + " ");
         }
         System.out.println();
+        //other code not shown
 ```
         
