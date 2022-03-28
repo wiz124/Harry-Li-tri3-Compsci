@@ -389,7 +389,7 @@ Challenge 2:
     
     this was easy, my code can be seen in the snippet above
     
- Extra Credit:
+ Extra Credit 1:
  
     SQRT function was the same thing as the exponent function
     
