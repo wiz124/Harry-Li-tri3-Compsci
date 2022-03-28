@@ -1,5 +1,7 @@
 package challenge;
 
+import challenge.calculator.Calculator;
+
 import java.util.Queue;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -21,7 +23,8 @@ public class Main {
 
         //while loop to loop through menu, waiting for exit program
     //try catch block looped to make sure we get right response, otherwise quit program
-        String[] options = new String[] {"0)Quit", "1)Integer Swap", "2)Matrix printer", "3)Queue fiddling", "4)Queue merging","5)Queue Reverse"};
+        String[] options = new String[] {"0)Quit", "1)Integer Swap", "2)Matrix printer", "3)Queue fiddling", "4)Queue merging","5)Queue Reverse",
+                "6)Calculator stack"};
         Scanner scan =  new Scanner(System.in);
     while (f) {
 
@@ -82,6 +85,27 @@ public class Main {
             else if(selection.equals("5")){
                 System.out.println("Original queue: " +astack.first().toString());
                 astack.reverse(astack.first());
+            }
+            else if(selection.equals("6")){
+
+                Calculator simpleMath = new Calculator("100 + 200  * 3");
+                System.out.println("Simple Math\n" + simpleMath);
+
+                TimeUnit.SECONDS.sleep(1);
+                Calculator parenthesisMath = new Calculator("(100 + 200)  * 3");
+                System.out.println("Parenthesis Math\n" + parenthesisMath);
+
+                TimeUnit.SECONDS.sleep(1);
+                Calculator allMath = new Calculator("200 % 300 + 5 + 300 / 200 + 1 * 100");
+                System.out.println("All Math\n" + allMath);
+                TimeUnit.SECONDS.sleep(1);
+
+                Calculator allMath2 = new Calculator("200 % (300 + 5 + 300) / 200 + 1 * 100");
+                System.out.println("All Math2\n" + allMath2);
+                Calculator allMath4 = new Calculator("3 ^ 2");
+                System.out.println("All Math2\n" + allMath4);
+                TimeUnit.SECONDS.sleep(3);
+
             }
             //create an error for try catch block to activate and be useful
           else {
