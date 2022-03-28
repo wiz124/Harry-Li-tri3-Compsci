@@ -98,7 +98,7 @@ class QueueIterator<T> implements Iterator<T> {
  */
 class QueueManager<T> {
     // queue data
-    private final String name; // name of queue
+    private String name; // name of queue
     private int count = 0; // number of objects in queue
     public final Queue<T> queue = new Queue<>(); // queue object
 
@@ -119,6 +119,16 @@ class QueueManager<T> {
         this.addList(seriesOfObjects);
         this.deleteList(seriesOfObjects);
     }
+    public QueueManager(T[]... seriesOfObjects){
+        this.addList(seriesOfObjects);
+    }
+    public void enqueue(T[]... seriesOfObjects) {
+        for (T[] objects: seriesOfObjects)
+            for (T data : objects) {
+                this.queue.add(data);
+            }
+    }
+
 
     /**
      * Add a list of objects to queue
@@ -166,7 +176,7 @@ class QueueTester {
     {
         // Create iterable Queue of Words
         Object[] words = new String[] { "seven", "slimy", "snakes", "sallying", "slowly", "slithered", "southward"};
-       new QueueManager("Words", words);
+        new QueueManager("Words", words);
 
 
 /*
