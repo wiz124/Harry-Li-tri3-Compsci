@@ -14,17 +14,19 @@ public class Calculator {
     public boolean intchecker(String n){
  try{
         double a = Double.parseDouble(n);
-        return true;
+
  }catch(NumberFormatException e){
      return false;
  }
+ return true;
     }
+
     private void rpnToResult()
     {
         // Stack used to hold calculation while process RPN
         Stack calculation = new Stack();
 
-        for(int i=0; i< reverse_polish.size()-1; i++)
+        for(int i=0; i< reverse_polish.size(); i++)
         {
 
             if(intchecker(reverse_polish.get(i)))// If the token is a number
@@ -36,28 +38,27 @@ public class Calculator {
             else
             {
                 // Pop the two top entries
-                Object a = calculation.pop();
-                Object b = calculation.pop();
+                Double fin = Double.parseDouble(calculation.pop().toString());
+                Double fin2 = Double.parseDouble(calculation.pop().toString());
                 // Based off of Token operator calculate result
-                tokensToReversePolishNotation();
 
-                double fin = (Double) a;
-                double fin2= (Double) b;
-
-                if(tokens.get(i).equals("+")){
+                if(reverse_polish.get(i).equals("+")){
                     result= fin + fin2;
                 }
-               else if(tokens.get(i).equals("-")){
+               else if(reverse_polish.get(i).equals("-")){
                     result=fin-fin2;
                 }
-               else if(tokens.get(i).equals("*")){
+               else if(reverse_polish.get(i).equals("*")){
                    result=fin*fin2;
                 }
-               else if(tokens.get(i).equals("/")){
+               else if(reverse_polish.get(i).equals("/")){
                    result = fin/fin2;
                 }
-               else if(tokens.get(i).equals("%")){
+               else if(reverse_polish.get(i).equals("%")){
                    result = fin%fin2;
+                }
+               else if(reverse_polish.get(i).equals("^")){
+                   result = Math.pow(fin2, fin);
                 }
 
 
@@ -66,7 +67,7 @@ public class Calculator {
             }
         }
         // Pop final result and set as final result for expression
-        this.result=(Double) calculation.pop();
+        this.result=Double.parseDouble(calculation.pop().toString());
     }
     // Print the expression, terms, and result
     public String toString() {
@@ -102,7 +103,7 @@ public class Calculator {
                     tokenStack.push(token);
                     break;
                 case ")":
-                    while (tokenStack.peek() != null && !tokenStack.peek().equals("("))
+                    while (!tokenStack.empty() && !tokenStack.peek().equals("("))
                     {
                         reverse_polish.add( (String)tokenStack.pop() );
                     }
@@ -113,10 +114,11 @@ public class Calculator {
                 case "*":
                 case "/":
                 case "%":
+                case "^":
                     // While stack
                     // not empty AND stack top element
                     // and is an operator
-                    while (tokenStack.peek() != null && isOperator((String) tokenStack.peek()))
+                    while (!tokenStack.empty() && isOperator((String) tokenStack.peek()))
                     {
                         if ( isPrecedent(token, (String) tokenStack.peek() )) {
                             reverse_polish.add((String)tokenStack.pop());
@@ -132,7 +134,7 @@ public class Calculator {
             }
         }
         // Empty remaining tokens
-        while (tokenStack.peek() != null) {
+        while (!tokenStack.empty()) {
             reverse_polish.add((String)tokenStack.pop());
         }
 
@@ -145,6 +147,7 @@ public class Calculator {
         OPERATORS.put("%", 3);
         OPERATORS.put("+", 4);
         OPERATORS.put("-", 4);
+        OPERATORS.put("^",2);
     }
     private final Map<String, Integer> SEPARATORS = new HashMap<>();
     {
@@ -214,5 +217,7 @@ public class Calculator {
 
         Calculator allMath2 = new Calculator("200 % (300 + 5 + 300) / 200 + 1 * 100");
         System.out.println("All Math2\n" + allMath2);
+        Calculator allMath4 = new Calculator("3 ^ 2");
+        System.out.println("All Math2\n" + allMath4);
     }
 }
