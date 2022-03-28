@@ -7,6 +7,7 @@ All tech talks can be found here
     <tr>
         <td><a href="#tt0">TT0</a></td>
         <td><a href="#tt1">TT1</a></td>
+        <td><a href="#tt2">TT2</a></td>
         <td>More Coming Soon!</td>
     </tr>
 </table>
@@ -282,3 +283,85 @@ Challenge 3
         //other code not shown
 ```
         
+#### TT2:
+
+Challenge 1:
+    
+    Took a while for me to understand what was going on
+    
+    basically code formats everything to reverse polish notation so computer can compile math, specifics will take while to explain 
+    
+    created an int checker to make sure token is number before pushing to stack 
+    
+    repeatable if else statements that corresponds to math expression
+    
+    happy this code wasn't done by scratch
+    
+``` java
+  public boolean intchecker(String n){
+ try{
+        double a = Double.parseDouble(n);
+
+ }catch(NumberFormatException e){
+     return false;
+ }
+ return true;
+    }
+
+    private void rpnToResult()
+    {
+        // Stack used to hold calculation while process RPN
+        Stack calculation = new Stack();
+
+        for(int i=0; i< reverse_polish.size(); i++)
+        {
+
+            if(intchecker(reverse_polish.get(i)))// If the token is a number
+            {
+                // Push number to stack
+                calculation.push(reverse_polish.get(i));
+            }
+            // else
+            else
+            {
+                // Pop the two top entries
+                Double fin = Double.parseDouble(calculation.pop().toString());
+                // Based off of Token operator calculate result
+
+                if(reverse_polish.get(i).equals("+")){
+                    Double fin2 = Double.parseDouble(calculation.pop().toString());
+                    result= fin + fin2;
+                }
+               else if(reverse_polish.get(i).equals("-")){
+                    Double fin2 = Double.parseDouble(calculation.pop().toString());
+                    result=fin-fin2;
+                }
+               else if(reverse_polish.get(i).equals("*")){
+                    Double fin2 = Double.parseDouble(calculation.pop().toString());
+                   result=fin*fin2;
+                }
+               else if(reverse_polish.get(i).equals("/")){
+                    Double fin2 = Double.parseDouble(calculation.pop().toString());
+                   result = fin/fin2;
+                }
+               else if(reverse_polish.get(i).equals("%")){
+                    Double fin2 = Double.parseDouble(calculation.pop().toString());
+                   result = fin%fin2;
+                }
+               else if(reverse_polish.get(i).equals("^")){
+                    Double fin2 = Double.parseDouble(calculation.pop().toString());
+                   result = Math.pow(fin2, fin);
+                }
+                else if(reverse_polish.get(i).equals("SQRT")){
+                    result = Math.sqrt(fin);
+                }
+
+
+                // Push result back onto the stack
+                calculation.push(result);
+            }
+        }
+        // Pop final result and set as final result for expression
+        this.result=Double.parseDouble(calculation.pop().toString());
+    }
+```
