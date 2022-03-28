@@ -123,6 +123,7 @@ public class Calculator {
                 case "/":
                 case "%":
                 case "^":
+                case "SQRT":
                     // While stack
                     // not empty AND stack top element
                     // and is an operator
@@ -233,8 +234,7 @@ public class Calculator {
         Calculator allMath3 = new Calculator("16 SQRT + 1");
         System.out.println("Square root\n" + allMath3);
 
-        Calculator var = new Calculator("a = 2 a + 1");
-        System.out.println("Square root\n" + var);
+
 
     }
 }
