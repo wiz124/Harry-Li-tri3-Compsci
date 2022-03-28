@@ -295,6 +295,8 @@ Challenge 1:
     
     repeatable if else statements that corresponds to math expression
     
+    Operators Hashmap help figure out order of operations
+    
     happy this code wasn't done by scratch
     
 ``` java
@@ -364,4 +366,33 @@ Challenge 1:
         // Pop final result and set as final result for expression
         this.result=Double.parseDouble(calculation.pop().toString());
     }
+     private final Map<String, Integer> OPERATORS = new HashMap<>();
+    {
+        // Map<"token", precedence>
+        OPERATORS.put("*", 3);
+        OPERATORS.put("/", 3);
+        OPERATORS.put("%", 3);
+        OPERATORS.put("+", 4);
+        OPERATORS.put("-", 4);
+        OPERATORS.put("^",2);
+        OPERATORS.put("SQRT", 2);
+    }
 ```
+
+Challenge 2:
+
+    Doing exponent was easy
+    
+    I create an expression just like the other operators
+    
+    Used the math.pow util to help out, i aint about to write a whole algorithm 
+    
+    this was easy, my code can be seen in the snippet above
+    
+ Extra Credit:
+ 
+    SQRT function was the same thing as the exponent function
+    
+    just have to watch out for syntax if i ever have to do user input
+    
+    
