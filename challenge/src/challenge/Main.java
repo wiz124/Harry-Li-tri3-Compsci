@@ -102,8 +102,14 @@ public class Main {
 
                 Calculator allMath2 = new Calculator("200 % (300 + 5 + 300) / 200 + 1 * 100");
                 System.out.println("All Math2\n" + allMath2);
-                Calculator allMath4 = new Calculator("3 ^ 2");
-                System.out.println("All Math2\n" + allMath4);
+                TimeUnit.SECONDS.sleep(1);
+
+                Calculator allMath4 = new Calculator("(3) ^ 2 + 1");
+                System.out.println("Exponents\n" + allMath4);
+                TimeUnit.SECONDS.sleep(1);
+
+                Calculator allMath3 = new Calculator("16 SQRT + 1");
+                System.out.println("Square root\n" + allMath3);
                 TimeUnit.SECONDS.sleep(3);
 
             }

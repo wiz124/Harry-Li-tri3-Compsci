@@ -39,26 +39,34 @@ public class Calculator {
             {
                 // Pop the two top entries
                 Double fin = Double.parseDouble(calculation.pop().toString());
-                Double fin2 = Double.parseDouble(calculation.pop().toString());
                 // Based off of Token operator calculate result
 
                 if(reverse_polish.get(i).equals("+")){
+                    Double fin2 = Double.parseDouble(calculation.pop().toString());
                     result= fin + fin2;
                 }
                else if(reverse_polish.get(i).equals("-")){
+                    Double fin2 = Double.parseDouble(calculation.pop().toString());
                     result=fin-fin2;
                 }
                else if(reverse_polish.get(i).equals("*")){
+                    Double fin2 = Double.parseDouble(calculation.pop().toString());
                    result=fin*fin2;
                 }
                else if(reverse_polish.get(i).equals("/")){
+                    Double fin2 = Double.parseDouble(calculation.pop().toString());
                    result = fin/fin2;
                 }
                else if(reverse_polish.get(i).equals("%")){
+                    Double fin2 = Double.parseDouble(calculation.pop().toString());
                    result = fin%fin2;
                 }
                else if(reverse_polish.get(i).equals("^")){
+                    Double fin2 = Double.parseDouble(calculation.pop().toString());
                    result = Math.pow(fin2, fin);
+                }
+                else if(reverse_polish.get(i).equals("SQRT")){
+                    result = Math.sqrt(fin);
                 }
 
 
@@ -148,6 +156,7 @@ public class Calculator {
         OPERATORS.put("+", 4);
         OPERATORS.put("-", 4);
         OPERATORS.put("^",2);
+        OPERATORS.put("SQRT", 2);
     }
     private final Map<String, Integer> SEPARATORS = new HashMap<>();
     {
@@ -217,7 +226,15 @@ public class Calculator {
 
         Calculator allMath2 = new Calculator("200 % (300 + 5 + 300) / 200 + 1 * 100");
         System.out.println("All Math2\n" + allMath2);
-        Calculator allMath4 = new Calculator("3 ^ 2");
-        System.out.println("All Math2\n" + allMath4);
+
+        Calculator allMath4 = new Calculator("(3) ^ 2 + 1");
+        System.out.println("Exponents\n" + allMath4);
+
+        Calculator allMath3 = new Calculator("16 SQRT + 1");
+        System.out.println("Square root\n" + allMath3);
+
+        Calculator var = new Calculator("a = 2 a + 1");
+        System.out.println("Square root\n" + var);
+
     }
 }
