@@ -2,6 +2,7 @@ package challenge;
 
 import challenge.calculator.Calculator;
 
+import java.sql.Time;
 import java.util.Queue;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -112,6 +113,12 @@ public class Main {
                 System.out.println("Square root\n" + allMath3);
                 TimeUnit.SECONDS.sleep(3);
 
+                System.out.println("Please refer to previous lines for syntax examples.");
+                System.out.println("Enter a math expression to evaluate: ");
+                String input = scan.nextLine();
+                Calculator in = new Calculator(input);
+                System.out.println("Result\n" + in);
+                TimeUnit.SECONDS.sleep(1);
             }
             //create an error for try catch block to activate and be useful
           else {
