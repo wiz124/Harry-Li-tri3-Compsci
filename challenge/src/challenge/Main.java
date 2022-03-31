@@ -120,6 +120,9 @@ public class Main {
                 System.out.println("Result\n" + in);
                 TimeUnit.SECONDS.sleep(1);
             }
+            else if(selection.equals("7")){
+
+            }
             //create an error for try catch block to activate and be useful
           else {
                 String myString = null;
