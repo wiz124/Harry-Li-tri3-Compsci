@@ -1,6 +1,7 @@
 package challenge;
 
 import challenge.calculator.Calculator;
+import challenge.sortalgo.Sorts;
 
 import java.sql.Time;
 import java.util.Queue;
@@ -25,7 +26,7 @@ public class Main {
         //while loop to loop through menu, waiting for exit program
     //try catch block looped to make sure we get right response, otherwise quit program
         String[] options = new String[] {"0)Quit", "1)Integer Swap", "2)Matrix printer", "3)Queue fiddling", "4)Queue merging","5)Queue Reverse",
-                "6)Calculator stack"};
+                "6)Calculator stack", "7)data sorting"};
         Scanner scan =  new Scanner(System.in);
     while (f) {
 
@@ -121,8 +122,32 @@ public class Main {
                 TimeUnit.SECONDS.sleep(1);
             }
             else if(selection.equals("7")){
+                int sum=0, time=0, TIMES=12, SIZE=5000;
 
-            }
+                    System.out.println("Choose a sort:\n 1)bubble\n 2)selection\n 3)insertion\n 4)merge");
+                    int a = scan.nextInt();
+                    System.out.println("Display data?:1 for Y/ 2 for N)");
+                    int b =scan.nextInt();
+
+                    for (int i = 0; i < TIMES; i++) {
+                        Sorts s = new Sorts(SIZE, a);
+                        for (int j = 0; j < s.getData().size(); j++) {
+                            // To see data, uncomment next line
+                            if(b==1) {
+                                System.out.println(s.getData());
+                            }
+                            sum += s.getData().get(j);
+                        }
+                        System.out.println("Average random: " + sum / ((i + 1) * SIZE));
+                        System.out.println("Nanoseconds: " + s.getTimeElapsed());
+                        time += s.getTimeElapsed();
+                    }
+
+                    System.out.println("Average random: " + sum / (TIMES * SIZE));
+                    System.out.println("Total Nanoseconds: " + time);
+                    System.out.println("Total Seconds: " + time / 1000000000.0);
+                }
+
             //create an error for try catch block to activate and be useful
           else {
                 String myString = null;
