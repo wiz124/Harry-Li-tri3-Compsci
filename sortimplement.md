@@ -19,9 +19,9 @@ How it works:
                 //compare elements
                 if (array.get(j - 1) > array.get(j)) {
                     //Swap
-                    int tmp = array.get(j - 1);
+                    int temp = array.get(j - 1);
                     array.set(j -1, array.get(j));
-                    array.set(j, tmp);
+                    array.set(j, temp);
                 }
             }
         }
