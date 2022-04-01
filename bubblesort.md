@@ -45,4 +45,6 @@ total time of bubble sort was 1.67 seconds
 
 average time of bubble sort was .14 seconds
 
-Highest time 
+Highest time was .236 seconds
+
+Lowest time was .124 seconds
