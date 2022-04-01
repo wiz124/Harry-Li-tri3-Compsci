@@ -36,3 +36,13 @@ Big O complexity:
   - space complexity: O(1)
       - bubble sort requires very little memory 
       - only needs to keep track of the extra variable during swapping
+### Analytics:
+Overall, around 6.1 million to 6.3 million swaps were made from the 12 tests
+
+12497500 comparisons were made each test
+
+total time of bubble sort was 1.67 seconds
+
+average time of bubble sort was .14 seconds
+
+Highest time 
