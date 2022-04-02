@@ -1,6 +1,6 @@
 {% include navigation.html %}
   
-<body>
+
 <table>
   <tr>
     <th><a href=".">Home</a></th>
@@ -21,8 +21,6 @@
     </th>
   </tr>
 </table>
-  <br>
-</body>
 
 WHY ARE WE HERE?
 
