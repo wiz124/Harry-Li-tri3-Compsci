@@ -1,27 +1,6 @@
 {% include navigation.html %}
   
 
-<table>
-  <tr>
-    <th><a href=".">Home</a></th>
-    <th><a href="https://github.com/wiz124/Harry-Li-tri3-Compsci/issues/4">This week's review ticket</a></th>
-    <th><a href=" https://replit.com/@HarryLi11/individual#Main.java">Replit code</a></th>
-    <th><a href="https://github.com/wrachel/PrimitiveApes">team repository</a></th>
-    <th> <a href="techtalk0">Tech Talks</a> </th>
-    <th>
-      <div class="dropdown">
-  <button class="dropbtn">Sorting Algorithms</button>
-  <div class="dropdown-content">
-    <a href="#">Bubble sort</a>
-    <a href="#">Insertion sort</a>
-    <a href="#">Selection sort</a>
-    <a href="#">Merge sort</a>
-  </div>
-</div>
-    </th>
-  </tr>
-</table>
-
 WHY ARE WE HERE?
 
 TO CODE!
