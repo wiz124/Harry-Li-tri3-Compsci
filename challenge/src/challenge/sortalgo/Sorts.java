@@ -3,7 +3,6 @@ package challenge.sortalgo;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Scanner;
 
 public class Sorts {
@@ -52,12 +51,16 @@ public class Sorts {
 
 
     public static void main(String[] args) {
-        int sum=0, time=0, TIMES=12, SIZE=5000;
-
+        int sum, time, TIMES=12, SIZE=5000;
+        int hightime=0;
+        int lowtime=Integer.MAX_VALUE;
         Scanner scan = new Scanner(System.in);
         int a=1;
 
 while(a!=0) {
+
+    sum=0;
+    time=0;
     System.out.println("Choose a sort: 1,2,3,4 \n 0 to exit");
     a = scan.nextInt();
     if(a==0){
@@ -65,19 +68,30 @@ while(a!=0) {
     }
     for (int i = 0; i < TIMES; i++) {
         Sorts s = new Sorts(SIZE, a);
+
         for (int j = 0; j < s.getData().size(); j++) {
             // To see data, uncomment next line
             //System.out.println(s.getData());
             sum += s.getData().get(j);
+
         }
         System.out.println("Average random: " + sum / ((i + 1) * SIZE));
         System.out.println("Nanoseconds: " + s.getTimeElapsed());
         time += s.getTimeElapsed();
+        if(hightime<s.getTimeElapsed()){
+            hightime=s.getTimeElapsed();
+        }
+        if(lowtime>s.getTimeElapsed()){
+            lowtime=s.getTimeElapsed();
+        }
     }
 
     System.out.println("Average random: " + sum / (TIMES * SIZE));
     System.out.println("Total Nanoseconds: " + time);
     System.out.println("Total Seconds: " + time / 1000000000.0);
+    System.out.println("Average time: "+  (time / 1000000000.0)/TIMES);
+    System.out.println("lowtime: "+lowtime/1000000000.0);
+    System.out.println("hightime: "+hightime/1000000000.0);
 
 }
         scan.close();
