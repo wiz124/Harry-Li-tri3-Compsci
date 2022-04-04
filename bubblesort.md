@@ -26,7 +26,7 @@ How it works:
             }
         }
 ```
-Big O complexity: 
+## Big O complexity: 
   - case time complexity:
       - has two loops which the inner loop does O(n) comparisons
       - worst case: O(n2), we assume that array fully disorganized and bubble sort has to keep sorting
