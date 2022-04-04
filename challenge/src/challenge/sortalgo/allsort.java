@@ -97,6 +97,7 @@ class mergesort extends allsort{
     public void divide(int start, int end) {
         if (start < end && (end - start) >= 1) {
             int mid = (end + start) / 2;
+            //recursion
             divide(start, mid);
             divide(mid + 1,end );
             merger(start, mid, end);
