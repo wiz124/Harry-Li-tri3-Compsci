@@ -29,8 +29,8 @@ How it works:
 ### Big O complexity: 
   - case time complexity:
       - has two loops which the inner loop does O(n) comparisons
-      - worst case: O(n2), we assume that array fully disorganized and bubble sort has to keep sorting
-      - average case: O(n2), we assume array partially sorted
+      - worst case: O(n^2), we assume that array fully disorganized and bubble sort has to keep sorting
+      - average case: O(n^2), we assume array partially sorted
       - best case: O(n), we assume array is fully sorted
       - bubble sort becomes more inefficient with larger data sets
   - space complexity: O(1)
