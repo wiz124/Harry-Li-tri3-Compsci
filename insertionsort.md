@@ -1,4 +1,4 @@
-# Selection Sorting Algorithms analysis:
+# Insertion Sorting Algorithms analysis:
 ### Terms to know:
   - time complexity 
       - amount of computer time it takes to run the algorithm
