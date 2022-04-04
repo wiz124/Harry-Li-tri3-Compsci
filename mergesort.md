@@ -11,6 +11,7 @@ How it works:
   - these pieces are then sorted
   - then pieces are merged and sorted until all data merged and sorted
   - basically a case of divide and conquer
+  
 ``` java
 //method begin
 divide(0,array.size()-1);
