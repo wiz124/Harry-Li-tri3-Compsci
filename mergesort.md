@@ -82,3 +82,6 @@ total time taken for the 12 tests is .09 seconds
 
 average time taken for each test is .0076 seconds
 
+shortest time taken was .00299 seconds
+
+longest time taken was .0259 seconds
