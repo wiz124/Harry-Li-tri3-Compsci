@@ -36,6 +36,7 @@ How it works:
       - not very good at sorting larger pieces of data
   - space compelexity
       - O(1), algorithm just keeps track of nth element position to resume comparison operation. 
+     
 ### Analytics:
 About 6.3 to 6.1 million swaps occurred for each test on average
 
