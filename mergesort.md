@@ -9,7 +9,13 @@ How it works:
   - splits array into pieces of 2
   - these pieces are then sorted
   - then pieces are merged and sorted until all data merged and sorted
+  - basically a case of divide and conquer
 ``` java
+//method begin
+divide(0,array.size()-1);
+//method end
+
+
 public void divide(int start, int end) {
         if (start < end && (end - start) >= 1) {
             int mid = (end + start) / 2;
@@ -21,7 +27,7 @@ public void divide(int start, int end) {
     }
     public void merger(int start, int mid, int end){
 
-        //arraylist that will the new sorted array
+        //arraylist that will be the new sorted array
         ArrayList<Integer> mergedSortedArray = new ArrayList<>();
 
         int leftIndex = start;
@@ -61,3 +67,16 @@ public void divide(int start, int end) {
     }
 ```
 ### Big O complexity:
+  - case time complexity 
+      - best case, worst case, and average case: O(n*log(n))
+      - ability to divide work makes it very fast
+  - space complexity
+      - O(n), amount of subarrays increases as data set increases
+      - larger datasets requires more memory
+### Analytics:
+No swaps in merge sort needed
+
+Around 55 thousand comparisons done
+
+
+
