@@ -73,6 +73,7 @@ public void divide(int start, int end) {
   - space complexity
       - O(n), amount of subarrays increases as data set increases
       - larger datasets requires more memory
+     
 ### Analytics:
 No swaps in merge sort needed
 
