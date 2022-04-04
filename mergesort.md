@@ -1,3 +1,4 @@
+{% include navigation.html %}
 # Merge Sorting Algorithms analysis:
 ### Terms to know:
   - time complexity 
