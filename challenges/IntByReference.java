@@ -1,3 +1,5 @@
+package challenges;
+
 public class IntByReference {
     private int value;
 

@@ -1,4 +1,4 @@
-package sortalgo;
+package challenges.sortalgo;
 
 import java.time.Duration;
 import java.time.Instant;

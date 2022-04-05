@@ -1,4 +1,4 @@
-package calculator;
+package challenges.calculator;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,10 +1,11 @@
+package challenges;
 
 import java.util.Queue;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-import calculator.Calculator;
-import sortalgo.Sorts;
+import challenges.calculator.Calculator;
+import challenges.sortalgo.Sorts;
 
 //challenge 1 completed
 public class Main {
