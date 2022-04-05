@@ -1,4 +1,3 @@
-package challenge;
 
 public class Matrix {
     private final int[][] matrix;

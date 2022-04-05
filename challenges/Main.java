@@ -1,11 +1,10 @@
-package challenge;
-
-import challenge.calculator.Calculator;
-import challenge.sortalgo.Sorts;
 
 import java.util.Queue;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+
+import calculator.Calculator;
+import sortalgo.Sorts;
 
 //challenge 1 completed
 public class Main {
@@ -72,6 +71,7 @@ public class Main {
                     Object[] words = new String[] { "seven", "slimy", "snakes", "sallying", "slowly", "slithered",
                             "southward" };
                     new QueueManager("Words", words);
+                    
                 } else if (selection.equals("4")) {
                     Queue result = mergeQueue.merge(mergeQueue.first(), mergeQueue.second());
                     System.out.println("1st Queue: " + mergeQueue.first());

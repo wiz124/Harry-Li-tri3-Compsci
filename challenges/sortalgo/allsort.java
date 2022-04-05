@@ -1,4 +1,4 @@
-package challenge.sortalgo;
+package sortalgo;
 
 import java.util.ArrayList;
 

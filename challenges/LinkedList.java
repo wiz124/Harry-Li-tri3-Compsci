@@ -1,5 +1,3 @@
-package challenge;
-
 /**
  * Implementation of a Double Linked List; forward and backward links point to
  * adjacent Nodes.

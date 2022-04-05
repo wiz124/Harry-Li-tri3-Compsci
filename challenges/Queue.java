@@ -1,5 +1,3 @@
-package challenge;
-
 import java.util.Iterator;
 
 /**
