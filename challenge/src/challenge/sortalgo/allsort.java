@@ -66,9 +66,10 @@ class Insertionsort extends allsort{
         for (int j = 1; j < array.size(); j++) {
             int current = array.get(j);
             int i = j-1;
-            //find place to insert
 
+            //find place to insert
             while ((i > -1) && (array.get(i) > current)) {
+                //swap if out of order
                 array.set(i+1,array.get(i));
                 i--;
                 compare=compare+2;
@@ -89,6 +90,7 @@ class mergesort extends allsort{
     @Override
     public void sort(ArrayList<Integer> array) {
         input=array;
+        //start of recursion in dividing up array
         divide(0,array.size()-1);
         System.out.println("Comparison: "+compare);
     }
@@ -111,8 +113,11 @@ class mergesort extends allsort{
         int leftIndex = start;
         int rightIndex = mid+1;
 
+
+        //merging array pieces
         while(leftIndex<=mid && rightIndex<=end){
             if(input.get(leftIndex)<=input.get(rightIndex)){
+                //noswaps here
                 mergedSortedArray.add(input.get(leftIndex));
                 leftIndex++;
             }else{
