@@ -1,3 +1,4 @@
+{% include navigation.html %}
 # Selection Sorting Algorithms analysis:
 ### Terms to know:
   - time complexity 
@@ -35,6 +36,7 @@ for (int i = 0; i < array.size()-1; i++) {
   - space complexity 
       - O(1): algorithm just needs to keep track of elements for swapping and smallest element in unsorted array
       - requires very little memory 
+     
 ### Analytics:
 All tests showed 4999 swaps 
 

@@ -36,6 +36,7 @@ How it works:
   - space complexity: O(1)
       - bubble sort requires very little memory 
       - only needs to keep track of the extra variable during swapping
+      
 ### Analytics:
 Overall, around 6.1 million to 6.3 million swaps were made from the 12 tests
 
