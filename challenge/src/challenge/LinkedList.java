@@ -1,97 +1,89 @@
 package challenge;
+
 /**
- *  Implementation of a Double Linked List;  forward and backward links point to adjacent Nodes.
+ * Implementation of a Double Linked List; forward and backward links point to
+ * adjacent Nodes.
  *
  */
 
-public class LinkedList<T>
-{
+public class LinkedList<T> {
     private T data;
     private LinkedList<T> prevNode, nextNode;
 
     /**
-     *  Constructs a new element
+     * Constructs a new element
      *
-     * @param  data, data of object
-     * @param  node, previous node
+     * @param data, data of object
+     * @param node, previous node
      */
-    public LinkedList(T data, LinkedList<T> node)
-    {
+    public LinkedList(T data, LinkedList<T> node) {
         this.setData(data);
         this.setPrevNode(node);
         this.setNextNode(null);
     }
 
     /**
-     *  Clone an object,
+     * Clone an object,
      *
-     * @param  node  object to clone
+     * @param node object to clone
      */
-    public LinkedList(LinkedList<T> node)
-    {
+    public LinkedList(LinkedList<T> node) {
         this.setData(node.data);
         this.setPrevNode(node.prevNode);
         this.setNextNode(node.nextNode);
     }
 
     /**
-     *  Setter for T data in DoubleLinkedNode object
+     * Setter for T data in DoubleLinkedNode object
      *
-     * @param  data, update data of object
+     * @param data, update data of object
      */
-    public void setData(T data)
-    {
+    public void setData(T data) {
         this.data = data;
     }
 
     /**
-     *  Returns T data for this element
+     * Returns T data for this element
      *
-     * @return  data associated with object
+     * @return data associated with object
      */
-    public T getData()
-    {
+    public T getData() {
         return this.data;
     }
 
     /**
-     *  Setter for prevNode in DoubleLinkedNode object
+     * Setter for prevNode in DoubleLinkedNode object
      *
      * @param node, prevNode to current Object
      */
-    public void setPrevNode(LinkedList<T> node)
-    {
+    public void setPrevNode(LinkedList<T> node) {
         this.prevNode = node;
     }
 
     /**
-     *  Setter for nextNode in DoubleLinkedNode object
+     * Setter for nextNode in DoubleLinkedNode object
      *
      * @param node, nextNode to current Object
      */
-    public void setNextNode(LinkedList<T> node)
-    {
+    public void setNextNode(LinkedList<T> node) {
         this.nextNode = node;
     }
 
-
     /**
-     *  Returns reference to previous object in list
+     * Returns reference to previous object in list
      *
-     * @return  the previous object in the list
+     * @return the previous object in the list
      */
-    public LinkedList<T> getPrevious()
-    {
+    public LinkedList<T> getPrevious() {
         return this.prevNode;
     }
 
     /**
-     *  Returns reference to next object in list
+     * Returns reference to next object in list
      *
-     * @return  the next object in the list
+     * @return the next object in the list
      */
-    public LinkedList<T> getNext()
-    {
+    public LinkedList<T> getNext() {
         return this.nextNode;
     }
 
