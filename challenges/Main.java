@@ -20,10 +20,11 @@ public class Main {
         // while loop to loop through menu, waiting for exit program
         // try catch block looped to make sure we get right response, otherwise quit
         // program
-        String[] options = new String[] { "0)Quit", "1)Integer Swap", "2)Matrix printer", "3)Queue fiddling",
-                "4)Queue merging", "5)Queue Reverse",
-                "6)Calculator stack", "7)data sorting" };
+        String[] options = new String[] { "0)Quit", "1)Integer Swap", "2)Matrix Printer", "3)Queue Fiddling",
+                "4)Queue Merging", "5)Queue Reverse",
+                "6)Hardcoded Calculator Cases", "7)Eval a Math Expression", "8) Sorting Algorithms" };
         Scanner scan = new Scanner(System.in);
+        
         while (f) {
 
             try {
@@ -72,7 +73,7 @@ public class Main {
                     Object[] words = new String[] { "seven", "slimy", "snakes", "sallying", "slowly", "slithered",
                             "southward" };
                     new QueueManager("Words", words);
-                    
+
                 } else if (selection.equals("4")) {
                     Queue result = mergeQueue.merge(mergeQueue.first(), mergeQueue.second());
                     System.out.println("1st Queue: " + mergeQueue.first());
@@ -108,13 +109,17 @@ public class Main {
                     System.out.println("Square root\n" + allMath3);
                     TimeUnit.SECONDS.sleep(3);
 
-                    System.out.println("Please refer to previous lines for syntax examples.");
-                    System.out.println("Enter a math expression to evaluate: ");
-                    String input = scan.nextLine();
-                    Calculator in = new Calculator(input);
-                    System.out.println("Result\n" + in);
                     TimeUnit.SECONDS.sleep(1);
                 } else if (selection.equals("7")) {
+                    System.out.println("Enter a math expression to evaluate: ");
+                    String input = scan.nextLine();
+
+                    Calculator in = new Calculator(input);
+
+                    System.out.println("Result\n" + in);
+
+                    TimeUnit.SECONDS.sleep(1);
+                } else if (selection.equals("8")) {
                     int sum = 0, time = 0, TIMES = 12, SIZE = 5000;
 
                     System.out.println("Choose a sort:\n 1)bubble\n 2)selection\n 3)insertion\n 4)merge");
@@ -152,11 +157,9 @@ public class Main {
                 System.out.println("Incorrect input");
 
             }
-
         }
         System.out.println("Goodbye");
         scan.close();
 
     }
-
 }

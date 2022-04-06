@@ -13,7 +13,7 @@ public class Calculator {
 
     public boolean intchecker(String n) {
         try {
-            double a = Double.parseDouble(n);
+            Double.parseDouble(n);
 
         } catch (NumberFormatException e) {
             return false;
@@ -23,7 +23,7 @@ public class Calculator {
 
     private void rpnToResult() {
         // Stack used to hold calculation while process RPN
-        Stack calculation = new Stack();
+        Stack<String> calculation = new Stack<>();
 
         for (int i = 0; i < reverse_polish.size(); i++) {
 
@@ -61,11 +61,11 @@ public class Calculator {
                 }
 
                 // Push result back onto the stack
-                calculation.push(result);
+                calculation.push(result.toString());
             }
         }
         // Pop final result and set as final result for expression
-        this.result = Double.parseDouble(calculation.pop().toString());
+        this.result = Double.parseDouble(calculation.pop());
     }
 
     // Print the expression, terms, and result
@@ -95,7 +95,7 @@ public class Calculator {
         this.reverse_polish = new ArrayList<>();
 
         // stack is used to reorder for appropriate grouping and precedence
-        Stack tokenStack = new Stack();
+        Stack<String> tokenStack = new Stack<>();
         for (String token : tokens) {
             switch (token) {
                 // If left bracket push token on to stack
