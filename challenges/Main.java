@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
         // menu for replit, use try catch block in development
 
-        // initialize necessary var
+        // initialize necessary variable
         boolean f = true;
         String selection;
 
