@@ -1,3 +1,6 @@
+{% include navigation.html %}
+
+
 # Data Tables
 
 | Sort | swaps(per case) |comparisons(per case) | total time of all 12 tests | avg time | highest time | lowest time | 
