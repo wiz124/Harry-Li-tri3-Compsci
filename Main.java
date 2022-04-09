@@ -22,6 +22,8 @@ public class Main {
         // while loop to loop through menu, waiting for exit program
         // try catch block looped to make sure we get right response, otherwise quit
         // program
+
+        //using arrays to output a menu
         String[] options = new String[] { "0)Quit", "1)Integer Swap", "2)Matrix Printer", "3)Queue Fiddling",
                 "4)Queue Merging", "5)Queue Reverse",
                 "6)Hardcoded Calculator Cases", "7)Eval a Math Expression", "8) Sorting Algorithms" };
@@ -35,8 +37,10 @@ public class Main {
                 // wait time for loop, allow reader to read prompts and results
                 TimeUnit.SECONDS.sleep(1);
                 scan = new Scanner(System.in);
+
                 // prompt:
                 System.out.println("\nMenu page: ");
+
                 for (String i : options) {
                     System.out.println("------------");
                     System.out.println(i);
@@ -45,7 +49,8 @@ public class Main {
                 System.out.println("Choose a program: ");
                 selection = scan.nextLine();
 
-                // checking selections
+                // checking selections by going through if statements
+
                 // quit programs
                 if (selection.equals("0")) {
                     scan.close();
@@ -68,11 +73,14 @@ public class Main {
                     System.out.println(m1);
                     TimeUnit.SECONDS.sleep(3);
 
+                    //enqueue and dequeue data example
                 } else if (selection.equals("3")) {
                     Object[] words = new String[] { "seven", "slimy", "snakes", "sallying", "slowly", "slithered",
                             "southward" };
                     new QueueManager("Words", words);
+                    TimeUnit.SECONDS.sleep(2);
 
+                    //merges two queues
                 } else if (selection.equals("4")) {
                     Queue result = MergeQueue.merge(MergeQueue.first(), MergeQueue.second());
                     System.out.println("1st Queue: " + MergeQueue.first());
@@ -80,15 +88,18 @@ public class Main {
                     TimeUnit.SECONDS.sleep(1);
                     System.out.println("Merged Queue: " + result);
 
+                    //reverses queues using stacks
                 } else if (selection.equals("5")) {
                     System.out.println("Original queue: " + Astack.first());
                     Astack.reverse(Astack.first());
+                    TimeUnit.SECONDS.sleep(2);
                 }
                 //hard coded calculator cases
                 else if (selection.equals("6")) {
                     CalcCase.cases();
                     TimeUnit.SECONDS.sleep(1);
 
+                    //calculator with user input
                 } else if (selection.equals("7")) {
                     System.out.println("Enter a math expression to evaluate: ");
                     String input = scan.nextLine();
@@ -99,6 +110,7 @@ public class Main {
 
                     TimeUnit.SECONDS.sleep(1);
 
+                    //leads to sorting algorithms
                 } else if (selection.equals("8")) {
 
 
@@ -140,7 +152,9 @@ public class Main {
 
         for (int i = 0; i < TIMES; i++) {
             //Sorts s = new Sorts(SIZE, choice);
+            //parent class
             Allsort s = null;
+            //polymorphism in action
 if(choice==1){
     s = new bubblesort(SIZE);
 }
@@ -166,7 +180,7 @@ else if (choice == 4){
             System.out.println("Swaps: " + s.getSorts());
             System.out.println("Comparisons: " + s.getComparisons());
         }
-
+//summary data
         System.out.println("Average random: " + sum / (TIMES * SIZE));
         System.out.println("Total Nanoseconds: " + time);
         System.out.println("Total Seconds: " + time / 1000000000.0);

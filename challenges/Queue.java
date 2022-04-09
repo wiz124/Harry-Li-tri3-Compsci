@@ -30,7 +30,7 @@ public class Queue<T> implements Iterable<T> {
             this.tail = tail; // update tail
         }
     }
-
+//delete data in queue
     public void delete() {
         this.head = this.head.getNext();
         if (head == null) {

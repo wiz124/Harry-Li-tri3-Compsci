@@ -9,6 +9,7 @@ public class selectionsort extends Allsort {
     }
 
     public void size(int size) {
+        //start sort test
         Instant start = Instant.now();
         super.size(size);
         sort();

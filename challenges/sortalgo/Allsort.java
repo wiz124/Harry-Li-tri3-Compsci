@@ -13,10 +13,12 @@ public class Allsort {
     public void size(int size) {
         swap =0;
         comparisons=0;
+        //creates data list
         for (int i = 0; i < size; i++) {
             data.add((int) (Math.random() * (size + 1)));
         }
     }
+    //getters for getting data on sorts
     public ArrayList<Integer> getData() {
         return data;
     }

@@ -43,6 +43,8 @@ public class QueueManager<T> {
     /**
      * Add a list of objects to queue
      */
+
+    //shows enqueue object to queue in action
     public void addList(T[]... seriesOfObjects) {
         for (T[] objects : seriesOfObjects)
             for (T data : objects) {
@@ -52,7 +54,7 @@ public class QueueManager<T> {
                 printQueue();
             }
     }
-
+// shows dequeue object from queue in action
     public void deleteList(T[]... seriesOfObjects) {
         for (T[] objects : seriesOfObjects) {
             for (T data : objects) {

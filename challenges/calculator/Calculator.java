@@ -38,24 +38,32 @@ public class Calculator {
                 Double fin = Double.parseDouble(calculation.pop().toString());
                 // Based off of Token operator calculate result
 
+                //syntax for what to do for each operator
                 if (reverse_polish.get(i).equals("+")) {
+                    //calculate result based off of numbers and operator
                     Double fin2 = Double.parseDouble(calculation.pop().toString());
                     result = fin + fin2;
+
                 } else if (reverse_polish.get(i).equals("-")) {
                     Double fin2 = Double.parseDouble(calculation.pop().toString());
                     result = fin - fin2;
+
                 } else if (reverse_polish.get(i).equals("*")) {
                     Double fin2 = Double.parseDouble(calculation.pop().toString());
                     result = fin * fin2;
+
                 } else if (reverse_polish.get(i).equals("/")) {
                     Double fin2 = Double.parseDouble(calculation.pop().toString());
                     result = fin / fin2;
+
                 } else if (reverse_polish.get(i).equals("%")) {
                     Double fin2 = Double.parseDouble(calculation.pop().toString());
                     result = fin % fin2;
+
                 } else if (reverse_polish.get(i).equals("^")) {
                     Double fin2 = Double.parseDouble(calculation.pop().toString());
                     result = Math.pow(fin2, fin);
+
                 } else if (reverse_polish.get(i).equals("SQRT")) {
                     result = Math.sqrt(fin);
                 }

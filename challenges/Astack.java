@@ -16,14 +16,21 @@ public class Astack {
     public static void reverse(Queue<Integer> a) {
         int n = a.size();
         Stack<Integer> stack = new Stack<Integer>();
+
         for (int i = 0; i < n; i++) {
+
             int curr = a.poll();
+            // putting queue data into a stack
             stack.push(curr);
         }
+
         for (int i = 0; i < n; i++) {
+
             int curr = stack.pop();
+            //add stack data back to queue to reverse
             a.add(curr);
         }
+        //print result
         System.out.print("Reversed Queue: ");
         for (Integer i : a) {
             System.out.print(i + " ");
