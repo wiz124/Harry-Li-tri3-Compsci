@@ -3,7 +3,7 @@ package challenges;
 import java.util.Queue;
 import java.util.LinkedList;
 
-public class mergeQueue {
+public class MergeQueue {
     public static Queue first() {
         Queue<Integer> first = new LinkedList<>();
         first.add(1);
@@ -40,9 +40,9 @@ public class mergeQueue {
 
     public static void main(String[] args) {
 
-        Queue result = merge(mergeQueue.first(), mergeQueue.second());
-        System.out.println("1st Queue: " + mergeQueue.first());
-        System.out.println("2nd Queue: " + mergeQueue.second());
+        Queue result = merge(MergeQueue.first(), MergeQueue.second());
+        System.out.println("1st Queue: " + MergeQueue.first());
+        System.out.println("2nd Queue: " + MergeQueue.second());
         System.out.println("Merged Queue: " + result);
 
     }

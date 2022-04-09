@@ -74,15 +74,15 @@ public class Main {
                     new QueueManager("Words", words);
 
                 } else if (selection.equals("4")) {
-                    Queue result = mergeQueue.merge(mergeQueue.first(), mergeQueue.second());
-                    System.out.println("1st Queue: " + mergeQueue.first());
-                    System.out.println("2nd Queue: " + mergeQueue.second());
+                    Queue result = MergeQueue.merge(MergeQueue.first(), MergeQueue.second());
+                    System.out.println("1st Queue: " + MergeQueue.first());
+                    System.out.println("2nd Queue: " + MergeQueue.second());
                     TimeUnit.SECONDS.sleep(1);
                     System.out.println("Merged Queue: " + result);
 
                 } else if (selection.equals("5")) {
-                    System.out.println("Original queue: " + astack.first());
-                    astack.reverse(astack.first());
+                    System.out.println("Original queue: " + Astack.first());
+                    Astack.reverse(Astack.first());
                 }
                 //hard coded calculator cases
                 else if (selection.equals("6")) {

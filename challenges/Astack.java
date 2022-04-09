@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class astack {
+public class Astack {
     public static Queue first() {
         Queue<Integer> first = new LinkedList<>();
         first.add(1);
@@ -33,6 +33,6 @@ public class astack {
 
     public static void main(String[] args) {
         System.out.println("Original queue: " + first().toString());
-        astack.reverse(first());
+        Astack.reverse(first());
     }
 }
