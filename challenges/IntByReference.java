@@ -1,5 +1,7 @@
 package challenges;
 
+import java.util.Scanner;
+
 public class IntByReference {
     private int value;
 
@@ -29,6 +31,15 @@ public class IntByReference {
         a.swap(b); // conditionally build swap method to change values of a, b
         System.out.println("After: " + a + " " + b);
         System.out.println();
+    }
+    public static void menu(){
+        Scanner scan  = new Scanner(System.in);
+        System.out.println("Enter an integer: ");
+        int a = scan.nextInt();
+        System.out.println("Enter an integer: ");
+        int b = scan.nextInt();
+        swapper(a,b);
+
     }
 
 }

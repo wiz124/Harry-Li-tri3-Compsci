@@ -6,7 +6,8 @@ import java.util.concurrent.TimeUnit;
 
 import challenges.*;
 import challenges.calculator.Calculator;
-import challenges.sortalgo.Sorts;
+import challenges.sortalgo.*;
+
 
 //challenge 1 completed
 public class Main {
@@ -24,6 +25,8 @@ public class Main {
         String[] options = new String[] { "0)Quit", "1)Integer Swap", "2)Matrix Printer", "3)Queue Fiddling",
                 "4)Queue Merging", "5)Queue Reverse",
                 "6)Hardcoded Calculator Cases", "7)Eval a Math Expression", "8) Sorting Algorithms" };
+
+        String[] sortsmenu = new String[] { "1)bubble", "2)selection", "3)insertion", "4)merge" };
         Scanner scan = new Scanner(System.in);
         
         while (f) {
@@ -50,12 +53,7 @@ public class Main {
                 }
                 // intswap selection
                 else if (selection.equals("1")) {
-                    System.out.println("Enter an integer: ");
-                    int a = scan.nextInt();
-                    System.out.println("Enter an integer: ");
-                    int b = scan.nextInt();
-
-                    IntByReference.swapper(a, b);
+                    IntByReference.menu();
                     TimeUnit.SECONDS.sleep(3);
                 }
                 // array printer selection
@@ -81,36 +79,16 @@ public class Main {
                     System.out.println("2nd Queue: " + mergeQueue.second());
                     TimeUnit.SECONDS.sleep(1);
                     System.out.println("Merged Queue: " + result);
+
                 } else if (selection.equals("5")) {
-                    System.out.println("Original queue: " + astack.first().toString());
+                    System.out.println("Original queue: " + astack.first());
                     astack.reverse(astack.first());
-                } else if (selection.equals("6")) {
-
-                    Calculator simpleMath = new Calculator("100 + 200  * 3");
-                    System.out.println("Simple Math\n" + simpleMath);
-
-                    TimeUnit.SECONDS.sleep(1);
-                    Calculator parenthesisMath = new Calculator("(100 + 200)  * 3");
-                    System.out.println("Parenthesis Math\n" + parenthesisMath);
-
-                    TimeUnit.SECONDS.sleep(1);
-                    Calculator allMath = new Calculator("200 % 300 + 5 + 300 / 200 + 1 * 100");
-                    System.out.println("All Math\n" + allMath);
+                }
+                //hard coded calculator cases
+                else if (selection.equals("6")) {
+                    CalcCase.cases();
                     TimeUnit.SECONDS.sleep(1);
 
-                    Calculator allMath2 = new Calculator("200 % (300 + 5 + 300) / 200 + 1 * 100");
-                    System.out.println("All Math2\n" + allMath2);
-                    TimeUnit.SECONDS.sleep(1);
-
-                    Calculator allMath4 = new Calculator("(3) ^ 2 + 1");
-                    System.out.println("Exponents\n" + allMath4);
-                    TimeUnit.SECONDS.sleep(1);
-
-                    Calculator allMath3 = new Calculator("16 SQRT + 1");
-                    System.out.println("Square root\n" + allMath3);
-                    TimeUnit.SECONDS.sleep(3);
-
-                    TimeUnit.SECONDS.sleep(1);
                 } else if (selection.equals("7")) {
                     System.out.println("Enter a math expression to evaluate: ");
                     String input = scan.nextLine();
@@ -120,31 +98,21 @@ public class Main {
                     System.out.println("Result\n" + in);
 
                     TimeUnit.SECONDS.sleep(1);
+
                 } else if (selection.equals("8")) {
-                    int sum = 0, time = 0, TIMES = 12, SIZE = 5000;
 
-                    System.out.println("Choose a sort:\n 1)bubble\n 2)selection\n 3)insertion\n 4)merge");
-                    int a = scan.nextInt();
-                    System.out.println("Display data?:1 for Y/ 2 for N)");
-                    int b = scan.nextInt();
 
-                    for (int i = 0; i < TIMES; i++) {
-                        Sorts s = new Sorts(SIZE, a);
-                        for (int j = 0; j < s.getData().size(); j++) {
-                            // To see data, uncomment next line
-                            if (b == 1) {
-                                System.out.println(s.getData());
-                            }
-                            sum += s.getData().get(j);
-                        }
-                        System.out.println("Average random: " + sum / ((i + 1) * SIZE));
-                        System.out.println("Nanoseconds: " + s.getTimeElapsed());
-                        time += s.getTimeElapsed();
+                    System.out.println("Choose a sort: ");
+                    for(String i: sortsmenu){
+                        System.out.println(i);
                     }
-
-                    System.out.println("Average random: " + sum / (TIMES * SIZE));
-                    System.out.println("Total Nanoseconds: " + time);
-                    System.out.println("Total Seconds: " + time / 1000000000.0);
+                    int a = scan.nextInt();
+                    if(a==1 || a==2 || a ==3 || a==4) {
+                        Main.sortmenu(a);
+                    }
+                    else{
+                        System.out.println("Wrong input");
+                    }
                 }
 
                 // create an error for try catch block to activate and be useful
@@ -161,6 +129,47 @@ public class Main {
         }
         System.out.println("Goodbye");
         scan.close();
+
+    }
+
+
+    //menu for sorting algorithm
+    public static void sortmenu(int choice){
+        int sum = 0, time = 0, TIMES = 12, SIZE = 5000;
+
+
+        for (int i = 0; i < TIMES; i++) {
+            //Sorts s = new Sorts(SIZE, choice);
+            Allsort s = null;
+if(choice==1){
+    s = new bubblesort(SIZE);
+}
+else if(choice==2){
+    s =  new selectionsort(SIZE);
+}
+else if(choice ==3){
+    s = new Insertionsort(SIZE);
+}
+else if (choice == 4){
+    s = new mergesort(SIZE);
+}
+
+            for (int j = 0; j < s.getData().size(); j++) {
+                // To see data, uncomment next line
+                   // System.out.println(s.getData());
+
+                sum += s.getData().get(j);
+            }
+            System.out.println("Average random: " + sum / ((i + 1) * SIZE));
+            System.out.println("Nanoseconds: " + s.getTimeElapsed());
+            time += s.getTimeElapsed();
+            System.out.println("Swaps: " + s.getSorts());
+            System.out.println("Comparisons: " + s.getComparisons());
+        }
+
+        System.out.println("Average random: " + sum / (TIMES * SIZE));
+        System.out.println("Total Nanoseconds: " + time);
+        System.out.println("Total Seconds: " + time / 1000000000.0);
 
     }
 }

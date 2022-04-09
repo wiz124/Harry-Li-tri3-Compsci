@@ -1,4 +1,4 @@
-package challenges.sortalgo;
+/* package challenges.sortalgo;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -19,16 +19,16 @@ public class Sorts {
         // data.sort(Comparator.naturalOrder());
 
         if (choice == 1) {
-            allsort bubble = new bubblesort();
+            Allsort bubble = new bubblesort();
             bubble.sort(data);
         } else if (choice == 2) {
-            allsort selection = new selectionsort();
+            Allsort selection = new selectionsort();
             selection.sort(data);
         } else if (choice == 3) {
-            allsort insertion = new Insertionsort();
+            Allsort insertion = new Insertionsort();
             insertion.sort(data);
         } else if (choice == 4) {
-            allsort merge = new mergesort();
+            Allsort merge = new mergesort();
             merge.sort(data);
         }
 
@@ -91,4 +91,6 @@ public class Sorts {
         }
         scan.close();
     }
+
 }
+*/
