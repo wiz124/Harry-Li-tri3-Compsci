@@ -4,6 +4,8 @@ import challenges.calculator.Calculator;
 
 import java.util.concurrent.TimeUnit;
 
+
+//purpose of this is to clean up code and store hard coded test cases for calculator
 public class CalcCase {
     public static void cases() throws InterruptedException {
         Calculator simpleMath = new Calculator("100 + 200  * 3");
