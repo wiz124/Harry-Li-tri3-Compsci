@@ -1,10 +1,10 @@
 # Data Tables
-|Sort|swaps(per case)|comparisons(per case)|total time of all 12 tests|avg time|highest time|lowest time|
-|----|-----|------------|---------|--------|------------|-----------|
-|Bubble|6.1 to 6.3 million|12497500|1.67 seconds|.14 seconds|.236 seconds|.124 seconds| 
-|Selection|4999|12502499|.422 seconds|.0352 seconds|.0618 seconds| .0279 seconds|
-|Insertion|6.1 to 6.3 million|12.5 to 12.6 million|.385 seconds| .0321 seconds|.0638 seconds| .0269 seconds|
-|Merge|0|55000|.09 seconds|.0076 seconds|.0259 seconds|.00299 seconds|
+| Sort | swaps(per case) |comparisons(per case) | total time of all 12 tests | avg time | highest time | lowest time | 
+| ---- | ----- | ------------ | --------- | -------- | ------------ | ----------- |
+| Bubble | 6.1 to 6.3 million | 12497500 | 1.67 seconds | .14 seconds | .236 seconds | .124 seconds | 
+| Selection | 4999 | 12502499 | .422 seconds | .0352 seconds | .0618 seconds | .0279 seconds |
+| Insertion | 6.1 to 6.3 million | 12.5 to 12.6 million | .385 seconds | .0321 seconds | .0638 seconds | .0269 seconds|
+| Merge | 0 | 55000 |.09 seconds | .0076 seconds | .0259 seconds | .00299 seconds |
 # Conclusion of Sorting ALgorithms
 The three sorts except merge all have little memory requirements however are slower than merge
 
