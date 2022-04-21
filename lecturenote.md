@@ -2,12 +2,12 @@
 
 <table>
     <tr>
-        <td><a href="#unit2">Unit2</a></td>
-        <td><a href="#unit1">Unit1</a></td>
+        <td><a href="#unit 2">Unit2</a></td>
+        <td><a href="#unit 1">Unit1</a></td>
     </tr>
 </table>
 
-## Unit2: Objected Oriented Programming
+## Unit 2: Objected Oriented Programming
 - original computers couldn't understand modern programming language
     - used machine language, not meant for humans to understand, meant to tell computer what to do
 - programming languages are made for humans
