@@ -2,8 +2,8 @@
 
 <table>
     <tr>
-        <td><a href="#unit2">Unit2</a></td>
-        <td><a href="#unit1">Unit1</a></td>
+        <td><a href="#Unit2 Objected Oriented Programming">Unit2</a></td>
+        <td><a href="#Unit1 Primitive Data Types in Java">Unit1</a></td>
     </tr>
 </table>
 
