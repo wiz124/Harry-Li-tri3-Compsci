@@ -2,12 +2,15 @@
 
 <table>
     <tr>
-        <td><a href="#unit2objectedorientedprogramming">Unit2</a></td>
-        <td><a href="#unit1primitivedatatypesinjava">Unit1</a></td>
+        <td><a href="#unit2">Unit2</a></td>
+        <td><a href="#unit1">Unit1</a></td>
     </tr>
 </table>
 
-## Unit2 Objected Oriented Programming
+## Unit2 
+
+###### Objected Oriented Programming
+
 - original computers couldn't understand modern programming language
     - used machine language, not meant for humans to understand, meant to tell computer what to do
 - programming languages are made for humans
@@ -63,7 +66,9 @@ Ex:
 - object oriented programming useful in collaboration
   - allows concurrent development
 
-## Unit1 Primitive Data Types in Java
+## Unit1 
+
+##### Primitive Data Types in Java
 
 [![Click to Watch](https://img.youtube.com/vi/W0q7XkV7BTo/0.jpg)](https://apclassroom.collegeboard.org/8/assignments?apd=4bsjoi2rui&status=assigned&unit=-2)
 
