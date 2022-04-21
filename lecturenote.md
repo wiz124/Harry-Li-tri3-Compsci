@@ -2,8 +2,8 @@
 
 <table>
     <tr>
-        <td><a href="#unit 2">Unit2</a></td>
-        <td><a href="#unit 1">Unit1</a></td>
+        <td><a href="#unit2">Unit2</a></td>
+        <td><a href="#unit1">Unit1</a></td>
     </tr>
 </table>
 
