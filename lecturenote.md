@@ -7,7 +7,7 @@
     </tr>
 </table>
 
-## Unit 2: Objected Oriented Programming
+## Unit2 Objected Oriented Programming
 - original computers couldn't understand modern programming language
     - used machine language, not meant for humans to understand, meant to tell computer what to do
 - programming languages are made for humans
@@ -63,7 +63,7 @@ Ex:
 - object oriented programming useful in collaboration
   - allows concurrent development
 
-## Unit 1: Primitive Data Types in Java
+## Unit1 Primitive Data Types in Java
 
 [![Click to Watch](https://img.youtube.com/vi/W0q7XkV7BTo/0.jpg)](https://apclassroom.collegeboard.org/8/assignments?apd=4bsjoi2rui&status=assigned&unit=-2)
 
